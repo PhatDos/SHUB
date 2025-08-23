@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.file-uploader {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-uploader:hover {
+  background-color: #e6f0ff;
+  border-color: #0056b3;
+}
+
+.file-uploader:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.file-uploader::file-selector-button {
+  padding: 8px 16px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.file-uploader::file-selector-button:hover {
+  background-color: #0056b3;
+}
+
+.form-group {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="file"] {
+  margin: 10px 0 20px;
+}
+
+input[type="time"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="time"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-input {
+  border-color: red !important;
+}
+
+.error-message {
+  color: red;
+  margin: 5px 0 15px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  color: #222;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e6f4ff; /* nền xanh nhạt */
+  border: 1px solid #91caff; /* viền xanh */
+  display: inline-block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
