@@ -2,7 +2,11 @@
 
 Make sure you have already installed Node JS
 
-Open your terminal, navigate to the project folder, and run:
+Open your terminal, navigate to the project folder:
+
+    cd task4
+
+And run:
 
     node index.js
 
@@ -25,7 +29,7 @@ When calculating the sum for the segment `[l, r]`:
 
     sum = build1[r+1] - build1[l]
 
-### For query type 2
+### Type 2
 
 The sum according to the alternating addition and subtraction formula over the segment `[l,r]`:
 
@@ -49,5 +53,4 @@ When retrieving the segment `[l, r]`, the alternating sum calculation is the sam
 
 ### Advantages
 
-- Optimizes query response time from O(n) to O(1) per query after building prefix sums in O(n).
-- Simple, easy-to-understand solution using standard prefix sums techniques.
+- Optimizes query response time from O(n*q) to O(n+q) after building prefix sums in O(n).
