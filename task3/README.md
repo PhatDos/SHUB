@@ -75,27 +75,9 @@
 -   **Group by** DATE(transaction_time) to calculate daily totals.
 -   **Order by** transaction_date DESC to show the latest days first.
 
-### Query 4: Get the top 3 best-selling products and total volume(liter) at a station for a given month
--   **Select aggregated fields:** product name, total quantity (SUM(t.quantity))
--   **Join strategy:**
+### Query 4: Top 3 Best-Selling Products at a Station for a Month
 
-1.   Join transactions t → pumps p on t.pump_id = p.pump_id to determine which product each pump dispenses.
-2.   Then join pumps p → products pr on p.product_id = pr.product_id to fetch product details (name, unit).
-3.   This is required because product_id is not stored directly in the transactions table.
-
--   **Filter conditions:**
-
-1.  t.station_id = 1 to restrict results to a single station.
-2.  Time window uses a half-open interval:
-t.transaction_time >= '2024-01-01' AND t.transaction_time < '2024-02-01'
-This captures all transactions in January 2024 without off-by-one issues at midnight.
-
--   **Grouping:**
-
-1.  GROUP BY p.product_id, pr.name, pr.unit aggregates all pumps that sell the same product into one row (desired when ranking best-selling products station-wide).
-2.  Grouping by product_id ensures correctness even if product names change.
-
--   **Ordering & limiting:**
-
-1.  ORDER BY total_quantity DESC ranks products by volume sold (liters).
-2.  LIMIT 3 returns the top three products.
+- **Select:** product name and total quantity sold.
+- **Joins:** transactions → pumps → products to get product details.
+- **Filter:** by station (station_id = 1) and month (transaction_time range).
+- **Group & Order:** group by product, order by total quantity descending, limit 3 results to get top 3.

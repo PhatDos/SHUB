@@ -27,3 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - Formik for form state management and handling  
 - Yup for schema-based form validation  
 - CSS (App.css) for styling and error highlighting  
+
+## File structure
+
+   Since this is a small exercise (a single-page application), I used the App.js component directly instead of separating it into multiple folders. The App.css file handles the styling for the entire application.
