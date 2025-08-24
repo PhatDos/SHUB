@@ -31,7 +31,7 @@ Then, the handleCalculate function:
 
 It calculates the total amount using Array.reduce:
 - Finds the first column key (Object.keys(row)[0]) to determine if the row is valid by check if the first column contains an integer or not, representing a real transaction row.
-- Reads the time from column __EMPTY_1(hour) and the amount from column __EMPTY_7(money).
+- Reads the time from column Hour and the amount from column Money.
 - Only sums the amount if the time is within the selected range.
 - Updates the total state with the calculated sum.
 
