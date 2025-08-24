@@ -1,6 +1,6 @@
 ## Guidance to execute the program:
 
-Make sure you have installed Node JS
+Make sure you have already installed Node JS
 
 Open your terminal, navigate to the project folder, and run:
 
