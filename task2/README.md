@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Make sure you have installed Node JS
 
-First step, change directory to task1 in terminal
+First step, change directory to task2 in terminal
 
 ### `cd task2`
 
@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - React for UI development  
 - Formik for form state management and handling  
 - Yup for schema-based form validation  
-- CSS (App.css) for styling and error highlighting  
+- App.css for styling and error highlighting  
 
 ## File structure
 
